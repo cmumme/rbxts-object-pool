@@ -16,8 +16,8 @@ export class InstancePool<T extends Instance> extends ObjectPool<T> {
 				object.CFrame = CFRAME_FAR_AWAY
 				object.Anchored = true
 			} else if (object.IsA('Model')) {
-				object.SetPrimaryPartCFrame(CFRAME_FAR_AWAY)
-				object.PrimaryPart!.Anchored = true
+				object.PivotTo(CFRAME_FAR_AWAY)
+				object.PrimaryPart?.Anchored = true
 			}
 			object.Parent = parent
 		}
