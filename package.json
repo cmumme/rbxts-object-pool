@@ -4,10 +4,10 @@
 	"main": "out/init.lua",
 	"license": "MIT",
 	"scripts": {
-		"build": "rbxtsc",
-		"watch": "rbxtsc -w",
+		"build": "yarn rbxtsc",
+		"watch": "yarn rbxtsc -w",
 		"prepare": "yarn run build",
-		"watch:test": "rbxtsc -w --type=game -p ./test -i ./include",
+		"watch:test": "yarn rbxtsc -w --type=game -p ./test -i ./include",
 		"serve:test": "rojo serve ./test/default.project.json",
 		"dev:test": "concurrently yarn:watch:test yarn:serve:test"
 	},
