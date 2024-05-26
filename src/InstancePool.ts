@@ -17,7 +17,9 @@ export class InstancePool<T extends Instance> extends ObjectPool<T> {
 				object.Anchored = true
 			} else if (object.IsA('Model')) {
 				object.PivotTo(CFRAME_FAR_AWAY)
-				object.PrimaryPart?.Anchored = true
+				if(object.PrimaryPart) {
+					object.PrimaryPart.Anchored = true
+				}
 			}
 			object.Parent = parent
 		}

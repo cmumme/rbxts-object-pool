@@ -11,7 +11,7 @@ export interface ObjectPoolOptions<T> {
 	onDispose?: (object: T) => void
 }
 
-export class ObjectPool<T> implements IObjectPool<T> {
+export class ObjectPool<T extends defined> implements IObjectPool<T> {
 	public expansionIncrement: number
 
 	private readonly inactive
